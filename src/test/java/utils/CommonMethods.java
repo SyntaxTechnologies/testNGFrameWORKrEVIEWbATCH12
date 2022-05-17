@@ -71,17 +71,15 @@ public class CommonMethods extends PageInitializers {
 
 
     public static byte[] takeScreenshot(String fileName){
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        byte[] picBytes = ts.getScreenshotAs(OutputType.BYTES);
-        File sourceFile = ts.getScreenshotAs(OutputType.FILE);
-
+        TakesScreenshot ts= (TakesScreenshot) driver;
+        byte[] picBytes= ts.getScreenshotAs(OutputType.BYTES);
+        File sourceFile=ts.getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(sourceFile, new File(Constants.SCREENSHOT_FILEPATH + fileName
-            + " " + getTimeStamp("yyyy-MM-dd-HH-mm-ss")+".png"));
+            FileUtils.copyFile(sourceFile,new File(Constants.SCREENSHOT_FILEPATH+fileName+" "+getTimeStamp("yyyy-MM-dd-HH-mm-ss")+".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
-return picBytes;
+        return picBytes;
     }
 
 

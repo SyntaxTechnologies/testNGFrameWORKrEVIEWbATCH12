@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utils.CommonMethods;
-
 public class loginTest extends CommonMethods {
 
     @Test
@@ -13,17 +12,17 @@ public class loginTest extends CommonMethods {
         Assert.assertTrue(IsDisplayed);
     }
 
-   @DataProvider(name="Credentials")
-   public Object [][] data(){
+    @DataProvider(name="Credentials")
+    public Object [][] data(){
 
-       Object[][] loginData={
-               {"Admin","abc","Invalid credentials"},
-               {"Admin","xyz","Invalid credentials"},
-               {"Admin","","Password cannot be empty"},
-               {"","hum","Username cannot be empty"}
-       };
-       return  loginData;
-   }
+        Object[][] loginData={
+                {"Admin","abc","Invalid credential"},
+                {"Admin","xyz","Invalid credentials"},
+                {"Admin","","Password cannot be empty"},
+                {"","hum","Username cannot be empty"}
+        };
+        return  loginData;
+    }
 
 
 
