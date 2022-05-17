@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 
 import java.io.File;
@@ -18,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class CommonMethods extends PageInitializers {
 
     public static WebDriver driver;
-
+    @BeforeMethod
     public void openBrowserAndLauchApplication(){
         ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
         switch (ConfigReader.getPropertyValue("browser")){
@@ -93,7 +95,7 @@ return picBytes;
 
 
 
-
+    @AfterMethod
     public static void tearDown(){
         driver.quit();
     }
