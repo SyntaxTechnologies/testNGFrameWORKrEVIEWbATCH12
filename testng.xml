@@ -5,12 +5,11 @@
         <listener class-name="utils.listeners"></listener>
     </listeners>
     <test verbose="2" preserve-order="true"
-          name="C:/Users/moazzam/Desktop/ahmets/TestNGFrameWork/src/test/java/Test/loginTest.java">
+          name="C:/Users/moazzam/Desktop/ahmets/TestNGFrameWork/src/test/java/Test/AddEmployeeTest.java">
         <classes>
-            <class name="Test.loginTest">
+            <class name="Test.AddEmployeeTest">
                 <methods>
-                    <include name="logoIsPresent"/>
-                    <include name="invalidCredentials"/>
+                    <include name="addEmployee"/>
                 </methods>
             </class>
         </classes>

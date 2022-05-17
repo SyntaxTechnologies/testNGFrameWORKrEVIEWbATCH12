@@ -24,5 +24,13 @@ public class LoginPage extends CommonMethods {
     public LoginPage(){
         PageFactory.initElements(driver, this);
     }
+
+    public void LoginMethod(String username , String password){
+        sendText(usernameBox,username);
+        sendText(passwordBox,password);
+        loginBtn.click();
+
+    }
+
 }
 
